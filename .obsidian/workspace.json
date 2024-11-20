@@ -8,33 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f207445bf2fb6265",
+            "id": "e3aaf873ebb5c7f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировки.md",
+                "file": "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Сортировки"
-            }
-          },
-          {
-            "id": "ab3ef2858b7595b5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Тьюб сортировка.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Тьюб сортировка"
+              "title": "Поиск"
             }
           }
         ]
@@ -178,53 +163,53 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "f207445bf2fb6265",
+  "active": "e3aaf873ebb5c7f1",
   "lastOpenFiles": [
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Тьюб сортировка.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск",
     "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировки.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка Шелла.md",
-    "Notes/Mathematics/Mathematics.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Пузырьковая сортировка.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Двоичная сортировка вставками.md",
+    "Блочная сортировка.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Тьюб сортировка.md",
     "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка корзинами.md",
-    "Media/Сортировка корзинами.gif",
     "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка подсчётом.md",
-    "Media/Сортировка подсчётом.gif",
     "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Поразрядная сортировка.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка Шелла.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Оценка сложности алгоритма/Асимптотическая сложность алгоритмов.md",
     "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Турнирная сортировка.md",
     "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка слиянием на месте.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка деревом.md",
-    "Media/Сортировка деревом.gif",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Двоичная сортировка вставками.md",
-    "Media/Двоичная сортировка вставками.gif",
     "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка слиянием.md",
-    "Start.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка деревом.md",
+    "Сортировка слиянием сложность.webp.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Пузырьковая сортировка.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Шейкерная сортировка.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Пирамидальная сортировка.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка выбором.md",
+    "Быстрая сортировка сложность.webp.md",
+    "Media/Шейкерная сортировка сложность.webp",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Быстрая сортировка.md",
+    "Media/Быстрая сортировка.gif",
+    "Media/Пузырьковая сортировка сложность.webp",
+    "Notes/Programming/Java/Java.md",
     "Notes/Programming/Programming.md",
+    "Notes/Programming/Code Structure/Code Structure.md",
+    "Notes/Programming/Code Structure/Clean code.md",
+    "Notes/Programming/Code Structure",
+    "Notes/Programming/Java",
+    "Media/Сортировка корзинами.gif",
+    "Media/Сортировка подсчётом.gif",
+    "Media/Сортировка деревом.gif",
+    "Media/Двоичная сортировка вставками.gif",
     "Notes/Programming",
     "Notes/Mathematics",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Быстрая сортировка.md",
     "Media/Сортировка Шелла.gif",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Шейкерная сортировка.md",
-    "Media/Шейкерная сортировка сложность.webp",
     "Media/Шейкерная сортировка.gif",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка вставками.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Пирамидальная сортировка.md",
-    "Пузырьковая.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
     "Media/Сортировка вставками сложность.webp",
-    "Media/Сортировка слиянием сложность.webp",
-    "Media/Пирамидальная сортировка сложность.webp",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка выбором.md",
     "Untitled 1",
     "Untitled",
-    "Notes/Programming/Computer Science/Подходы к разработке/Подходы к разработке.md",
-    "Notes/Computer Science/Алгоритмы/Сортировки/Сортировки обменами/Сортировки обменами.md",
     "Notes/Computer Science/Алгоритмы/Сортировки/Сортировки обменами",
-    "Notes/Programming/Computer Science/Computer Science.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Оценка сложности алгоритма/Оценка сложности алгоритма.md",
     "Notes/Programming/Computer Science/Алгоритмы/Сортировки",
-    "Notes/Programming/Computer Science/Алгоритмы/Оценка сложности алгоритма",
-    "Notes/Programming/Computer Science/Алгоритмы",
-    "Notes/Programming/Computer Science/Подходы к разработке",
-    "Notes/Programming/Computer Science/Парадигмы программирования"
+    "Notes/Programming/Computer Science/Алгоритмы/Оценка сложности алгоритма"
   ]
 }

@@ -1,5 +1,6 @@
 
 #### [[Computer Science]]
+#### [[Code Structure]]
 #### [[Java]]
 #### [[Hibernate]]
 #### [[Spring]]
@@ -12,4 +13,5 @@
 
 Остальное (без структуры)
 - Шаги по Code Review
+- Refactoring
 - Типы управления проектами (канбан, водопад и прч)
