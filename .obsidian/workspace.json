@@ -8,48 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2281e225deccee96",
+            "id": "faa9ae089505bd22",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск.md",
+                "file": "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Поиск"
-            }
-          },
-          {
-            "id": "2db081ae8ee0a1fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Жадные алгоритмы.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Жадные алгоритмы"
-            }
-          },
-          {
-            "id": "fc9f48ff95bb58df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск в красно-чёрном дереве.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Поиск в красно-чёрном дереве"
+              "title": "Алгоритмы"
             }
           }
         ]
@@ -170,10 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск.md"
+                "file": "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Краскала.md"
               },
               "icon": "lucide-list",
-              "title": "Структура Поиск"
+              "title": "Структура Алгоритм Краскала"
             }
           }
         ],
@@ -194,36 +164,36 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "2281e225deccee96",
+  "active": "faa9ae089505bd22",
   "lastOpenFiles": [
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Жадные алгоритмы.md",
     "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Жадные алгоритмы.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск с возвратом.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Беллмана-Форда.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Дейкстры.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Краскала.md",
+    "Notes/Programming/Computer Science/Структуры данных/Граф.md",
+    "Notes/Programming/Computer Science/Структуры данных/Неориентированный граф.md",
+    "Notes/Programming/Computer Science/Структуры данных/Ориентированный граф.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
+    "Notes/Programming/Computer Science/Структуры данных/Дерево.md",
+    "Notes/Mathematics/Mathematics.md",
+    "Notes/Mathematics/Обратная функция Аккермана.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Прима.md",
+    "Notes/Programming/Computer Science/Структуры данных/Минимальное остовное дерево.md",
+    "Notes/Programming/Computer Science/Computer Science.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Задача о покрытии множества.md",
     "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Задача о размене монет.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы",
+    "Notes/Programming/Code Structure/Code Structure.md",
+    "Notes/Programming/Code Structure/Refactoring.md",
+    "Notes/Programming/Code Structure/Code reviews.md",
+    "Notes/Programming/Code Structure/Clean code.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Динамическое программирование.md",
     "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск в красно-чёрном дереве.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы",
     "Notes/Mathematics/Эвристическая функция.md",
     "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск по хэш-функции.md",
-    "Notes/Programming/Computer Science/Структуры данных/Структуры данных.md",
-    "Notes/Programming/Computer Science/Структуры данных/Хэш-таблица.md",
-    "Notes/Programming/Computer Science/Структуры данных/Массив.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Хэширование.md",
-    "Notes/Programming/Computer Science/Структуры данных/Красно-чёрное дерево.md",
-    "Notes/Programming/Computer Science/Структуры данных/Бинарное дерево поиска.md",
     "Media/Красно-чёрное дерево.png",
-    "Notes/Programming/Computer Science/Структуры данных/NIL-узлы.md",
-    "Notes/Mathematics/Mathematics.md",
-    "Notes/Mathematics/Манхэттенское расстояние.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
-    "Notes/Programming/Computer Science/Подходы к разработке/Подходы к разработке.md",
-    "Notes/Programming/Computer Science/Структуры данных/Дерево.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Эвристические/Эвристические алгоритмы.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Алгоритм Бойера-Мура.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Алгоритм Рабина-Карпа.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Деревья/Поиск в деревьях.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Алгоритм Кнута-Морриса-Пратта.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Наивный алгоритм.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Строки/Поиск в строках.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск А*.md",
     "Notes/Programming/Computer Science/Алгоритмы/Рекурсия",
     "Линейный",
     "Notes/Programming/Computer Science/Структуры данных",
