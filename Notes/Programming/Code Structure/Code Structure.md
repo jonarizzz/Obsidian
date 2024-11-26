@@ -1,4 +1,4 @@
 
-[[Clean code]]
-[[Code reviews]]
-[[Refactoring]]
+[[{TODO} Clean code]]
+[[{TODO} Code reviews]]
+[[{TODO} Refactoring]]

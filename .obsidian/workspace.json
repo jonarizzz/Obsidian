@@ -8,21 +8,82 @@
         "type": "tabs",
         "children": [
           {
-            "id": "faa9ae089505bd22",
+            "id": "c377c974a4396c1c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
+                "file": "Currency.com.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Алгоритмы"
+              "title": "Currency.com"
+            }
+          },
+          {
+            "id": "f5be7e7c33d130e9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Start.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Start"
+            }
+          },
+          {
+            "id": "8e515ed080d10b44",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Programming/Java/Многопоточка/Многопоточка.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Многопоточка"
+            }
+          },
+          {
+            "id": "f7358ad5ddcf8156",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Programming/Java/Многопоточка/Многопоточка.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Многопоточка"
+            }
+          },
+          {
+            "id": "603cb68392543907",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Programming/Java/Многопоточка/Синхронизация потоков.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Синхронизация потоков"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -164,47 +225,47 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "faa9ae089505bd22",
+  "active": "8e515ed080d10b44",
   "lastOpenFiles": [
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Жадные алгоритмы.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск с возвратом.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Беллмана-Форда.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Дейкстры.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Краскала.md",
-    "Notes/Programming/Computer Science/Структуры данных/Граф.md",
-    "Notes/Programming/Computer Science/Структуры данных/Неориентированный граф.md",
-    "Notes/Programming/Computer Science/Структуры данных/Ориентированный граф.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
-    "Notes/Programming/Computer Science/Структуры данных/Дерево.md",
-    "Notes/Mathematics/Mathematics.md",
-    "Notes/Mathematics/Обратная функция Аккермана.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Прима.md",
-    "Notes/Programming/Computer Science/Структуры данных/Минимальное остовное дерево.md",
-    "Notes/Programming/Computer Science/Computer Science.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Задача о покрытии множества.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Задача о размене монет.md",
+    "Notes/Programming/Java/Java.md",
+    "Notes/Programming/Programming.md",
+    "Start.md",
+    "Notes/Programming/Java/Многопоточка/Локи.md",
+    "Currency.com.md",
+    "Notes/Programming/Java/Многопоточка/{TODO} Атомики.md",
+    "Notes/Programming/Java/Многопоточка/Многопоточка.md",
+    "Currency.com мясо.md",
     "Notes/Programming/Code Structure/Code Structure.md",
-    "Notes/Programming/Code Structure/Refactoring.md",
-    "Notes/Programming/Code Structure/Code reviews.md",
-    "Notes/Programming/Code Structure/Clean code.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Динамическое программирование.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск в красно-чёрном дереве.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы",
+    "Notes/Mathematics/Mathematics.md",
     "Notes/Mathematics/Эвристическая функция.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Поиск по хэш-функции.md",
+    "Notes/Mathematics/Эвклидово расстояние.md",
+    "Notes/Mathematics/Манхэттенское расстояние.md",
+    "Notes/Mathematics/{TODO} Обратная функция Аккермана.md",
+    "Notes/Mathematics/{TODO} Линейная интерполяция.md",
+    "Notes/Programming/Java/Многопоточка/Синхронизация потоков.md",
+    "Notes/Programming/Java/Многопоточка/Volatile.md",
+    "Notes/Programming/Web.md",
+    "Notes/Programming/Spring.md",
+    "Notes/Programming/Java/Версии Java/Версии Java.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка вставками.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Оценка сложности алгоритма/Асимптотическая сложность алгоритмов.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Оценка сложности алгоритма/Big O.md",
+    "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
+    "Notes/Programming/Java/Многопоточка/Поток.md",
+    "Notes/Programming/Java/Многопоточка/Процесс.md",
+    "Notes/Programming/Java/Core Java",
+    "Notes/Programming/Java/Java Memory Model",
+    "Notes/Programming/Computer Science/Память",
+    "Fork",
+    "Notes/Programming/Java/Версии Java",
+    "Notes/Programming/Java/Многопоточка",
+    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы",
     "Media/Красно-чёрное дерево.png",
     "Notes/Programming/Computer Science/Алгоритмы/Рекурсия",
     "Линейный",
     "Notes/Programming/Computer Science/Структуры данных",
     "Без названия.canvas",
     "Media/График сложности алгоритмов.png",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/В упорядоченных данных",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Эвристические",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Хэш-таблицы",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Деревья",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Графы",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Строки",
     "Media/Шейкерная сортировка сложность.webp",
     "Media/Быстрая сортировка.gif",
     "Media/Пузырьковая сортировка сложность.webp",
