@@ -4,86 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "be2197ab3979b22b",
+        "id": "a18d4f777abdcafb",
         "type": "tabs",
         "children": [
           {
-            "id": "c377c974a4396c1c",
+            "id": "73e158e5b60c7877",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Currency.com.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Currency.com"
-            }
-          },
-          {
-            "id": "f5be7e7c33d130e9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Start.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Start"
-            }
-          },
-          {
-            "id": "8e515ed080d10b44",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Programming/Java/Многопоточка/Многопоточка.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Многопоточка"
-            }
-          },
-          {
-            "id": "f7358ad5ddcf8156",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Programming/Java/Многопоточка/Многопоточка.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Многопоточка"
-            }
-          },
-          {
-            "id": "603cb68392543907",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Programming/Java/Многопоточка/Синхронизация потоков.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Синхронизация потоков"
+              "title": "Новая вкладка"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +36,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Файловый менеджер"
@@ -114,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "race condi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -139,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.5
+    "width": 490.5
   },
   "right": {
     "id": "5a1a1d4103f51ad1",
@@ -225,45 +160,46 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "8e515ed080d10b44",
+  "active": "73e158e5b60c7877",
   "lastOpenFiles": [
-    "Notes/Programming/Java/Java.md",
-    "Notes/Programming/Programming.md",
-    "Start.md",
-    "Notes/Programming/Java/Многопоточка/Локи.md",
     "Currency.com.md",
-    "Notes/Programming/Java/Многопоточка/{TODO} Атомики.md",
-    "Notes/Programming/Java/Многопоточка/Многопоточка.md",
-    "Currency.com мясо.md",
-    "Notes/Programming/Code Structure/Code Structure.md",
-    "Notes/Mathematics/Mathematics.md",
-    "Notes/Mathematics/Эвристическая функция.md",
-    "Notes/Mathematics/Эвклидово расстояние.md",
-    "Notes/Mathematics/Манхэттенское расстояние.md",
-    "Notes/Mathematics/{TODO} Обратная функция Аккермана.md",
-    "Notes/Mathematics/{TODO} Линейная интерполяция.md",
-    "Notes/Programming/Java/Многопоточка/Синхронизация потоков.md",
-    "Notes/Programming/Java/Многопоточка/Volatile.md",
-    "Notes/Programming/Web.md",
-    "Notes/Programming/Spring.md",
-    "Notes/Programming/Java/Версии Java/Версии Java.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Сортировки/Сортировка вставками.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Оценка сложности алгоритма/Асимптотическая сложность алгоритмов.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Оценка сложности алгоритма/Big O.md",
-    "Notes/Programming/Computer Science/Алгоритмы/Алгоритмы.md",
-    "Notes/Programming/Java/Многопоточка/Поток.md",
-    "Notes/Programming/Java/Многопоточка/Процесс.md",
-    "Notes/Programming/Java/Core Java",
-    "Notes/Programming/Java/Java Memory Model",
-    "Notes/Programming/Computer Science/Память",
-    "Fork",
-    "Notes/Programming/Java/Версии Java",
-    "Notes/Programming/Java/Многопоточка",
-    "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы",
+    "Notes/Programming/Java/Multithreading/Локи (Locks).md",
+    "Notes/Programming/Java/Memory/Shenandoah GC.md",
+    "Notes/Programming/Java/Java Versions/{TODO} Java 12.md",
+    "Notes/Programming/Java/Memory/Сборщик Мусора (Garbage Collector).md",
+    "Notes/Programming/Java/Memory/Parallel GC.md",
+    "Notes/Programming/Java/Memory/G1 GC.md",
+    "Notes/Programming/Java/Memory/ZGC.md",
+    "Notes/Programming/Java/Memory/Serial GC.md",
+    "Notes/Programming/Java/Memory/Фрагментация Памяти (Memory Fragmentation).md",
+    "Notes/Programming/Java/Memory/Heap (Область Памяти).md",
+    "Notes/Programming/Java/Java Versions/{TODO} Java 7.md",
+    "Notes/Programming/Java/Java Versions/{TODO} Java 15.md",
+    "Notes/Programming/Java/Java Versions/{TODO} Java 11.md",
+    "Notes/Programming/Java/Data Structures/Wrappers/{TODO} Integer.md",
+    "Notes/Programming/Java/Data Structures/Wrappers",
+    "Notes/Programming/Databases/Соединение с БД (DB Connection).md",
+    "Notes/Programming/Patterns/Пул Объектов (паттерн).md",
+    "Notes/Programming/Java/Multithreading/Happens Before.md",
+    "Notes/Programming/Java/Data Structures/Exceptions/{TODO} InterruptedException.md",
+    "Notes/Programming/Java/Multithreading/Гонки Данных (Data Races).md",
+    "Notes/Programming/Java/Multithreading/Состояние Гонки (Race Condition).md",
+    "Notes/Programming/Unsorted/Атомики.md",
+    "Notes/Programming/Unsorted/Проблемы многопоточности.md",
+    "Notes/Programming/Java/Multithreading/Java Memory Model.md",
+    "Notes/Programming/{TODO} Кэш (Cache).md",
+    "Notes/Programming/Unsorted/{TODO} Правила “большого пальца”.md",
+    "Notes/Programming/Java/Serialization",
+    "Notes/Programming/Web",
+    "Notes/Programming/Java/Java Versions",
+    "Notes/Programming/Patterns",
+    "Notes/Programming/Java/Memory/Reference",
+    "Notes/Programming/Java/Data Structures/Exceptions",
+    "Notes/Programming/Java/Exceptions",
+    "Notes/Programming/Java/Memory",
+    "Notes/Programming/Java/Data Structures/Interfaces",
+    "800.jpeg",
     "Media/Красно-чёрное дерево.png",
-    "Notes/Programming/Computer Science/Алгоритмы/Рекурсия",
-    "Линейный",
-    "Notes/Programming/Computer Science/Структуры данных",
     "Без названия.canvas",
     "Media/График сложности алгоритмов.png",
     "Media/Шейкерная сортировка сложность.webp",
@@ -272,7 +208,6 @@
     "Media/Сортировка корзинами.gif",
     "Media/Сортировка подсчётом.gif",
     "Media/Сортировка деревом.gif",
-    "Media/Двоичная сортировка вставками.gif",
-    "Media/Сортировка Шелла.gif"
+    "Media/Двоичная сортировка вставками.gif"
   ]
 }

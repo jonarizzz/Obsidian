@@ -1,0 +1,115 @@
+- [[Примитивные Типы Данных (Primitives)||Primitives]]
+	- [[byte]] – четвертина int
+	- [[short]] – половина int
+	- [[int]] – целочисленная база
+	- [[long]] – двойной int
+	- [[float]] – маленький дробный
+	- [[double]] – большой дробный
+	- [[char]]
+	- [[boolean]]
+
+- [[Iterable (интерфейс)]]
+	- [[Collection (интерфейс)]]
+		- [[List (интерфейс)]]
+			- [[ArrayList]]
+			- [[LinkedList]]
+			- [[{TODO} Stack]]
+			- [[{TODO} Vector]]
+			- [[CopyOnWriteArrayList]] – java.util.concurrent
+		- [[{TODO} Set (интерфейс)]]
+			- [[HashSet]]
+			- [[{TODO} TreeSet]]
+			- [[{TODO} LinkedHashSet]]
+			- [[{TODO} CopyOnWriteArraySet]] – java.util.concurrent
+		- [[{TODO} Queue (интерфейс)]]
+			- [[{TODO} PriorityQueue]]
+			- [[LinkedList]]
+			- [[{TODO} Deque (интерфейс)]]
+				- [[{TODO} ArrayDeque]]
+				- [[LinkedList]]
+			- [[ConcurrentLinkedQueue]]
+			- [[ConcurrentLinkedDeque]]
+			- DelayQueue
+			- LinkedTransferQueue
+
+
+
+--- 
+
+- [[Object (класс)||Object]]
+	- Throwable
+		- [[{TODO} Error||Error]]
+			- OutOfMemoryError
+			- StackOverflowError
+			- Другие ошибки…
+		- Exception
+			- RuntimeException
+				- NullPointerException
+				- ArrayIndexOutOfBoundsException
+				- Другие runtime-исключения…
+			- Проверяемые исключения (Checked Exceptions)
+				- IOException
+				- SQLException
+				- Другие…
+	- String
+	- Enum
+		- Пользовательские перечисления
+	
+	- Map (не наследуется от Collection)
+		- [[HashMap]]
+		- [[TreeMap]]
+		- [[{TODO} LinkedHashMap]]
+		- [[{TODO} WeakHashMap]]
+		- [[ConcurrentHashMap]]
+		- [[HashTable]]
+	- Абстрактные классы
+		- AbstractList
+		- AbstractSet
+		- AbstractMap
+		- AbstractQueue
+	- Интерфейсы
+		- Serializable
+		- Cloneable
+		- [[{TODO} Comparable (интерфейс)]]
+		- Iterable
+		- Executor (и другие интерфейсы для многопоточности)
+		- Пользовательские интерфейсы
+	- Массивы
+		- int[], String[], Object[], и другие (все наследуют Object)
+	- Классы-обертки (Wrapper Classes)
+		- Integer
+		- Double
+		- Float
+		- Long
+		- Short
+		- Byte
+		- Character
+		- Boolean
+
+	- Обобщения (Generics)
+		- Обобщенные классы (например, `List<T>`)
+		- Обобщенные методы
+	- Стримы (Streams, Java 8+)
+		- Stream
+		- IntStream
+		- LongStream
+		- DoubleStream
+	- Другие типы
+		- Record (Java 14+)
+		- Annotation
+			- Пользовательские аннотации
+		- Module (Java 9+)
+		- Optional (Java 8+)
+		- CompletableFuture (Java 8+)
+		- Path (из java.nio.file)
+		- Пользовательские классы…
+
+
+- Атомики ([[Атомики (Atomics)||Atomics]])
+	- [[AtomicBoolean]]
+	- [[AtomicInteger]]
+	- [[AtomicLong]]
+	- [[AtomicReference]]
+	- [[AtomicIntegerArray]]
+	- [[AtomicLongArray]]
+	- [[AtomicReferenceArray]]

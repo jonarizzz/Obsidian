@@ -1,1 +1,5 @@
-{}
+{
+  "showRibbon": true,
+  "theme": "system",
+  "accentColor": "#47ff14"
+}
