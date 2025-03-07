@@ -133,7 +133,7 @@ HAVING
 	- Консистентность = данные остаются целостными, соблюдаются все ограничения ([[Внешний Ключ (Foreign Key)||внешние ключи]], [[Уникальный Ключ (Unique Key)||уникальность]] и т.п.)
 	- Изолированность = параллельные транзакции не влияют друг на друга, предотвращая ошибки, например, [[Грязное Чтение (Dirty Read)||грязные чтения]].
 	- Надёжность = данные сохраняются даже при сбоях (отключение электричества)
-	- Java-приложения используют [[ACID||ACID]] для работы с базами через [[{TODO} JPA||JPA]]/[[{TODO} Hibernate||Hibernate]] или [[{TODO} Spring||Spring]], чтобы гарантировать надежность, особенно в критичных системах (банки, магазины, бронирования).
+	- Java-приложения используют [[ACID||ACID]] для работы с базами через [[JPA (Java Persistence API)||JPA]]/[[{TODO} Hibernate||Hibernate]] или [[Спринг Фреймворк (Spring Framework)||Spring]], чтобы гарантировать надежность, особенно в критичных системах (банки, магазины, бронирования).
 - С какими наиболее распространенными проблемами производительности сталкиваются разработчики при работе с [[Реляционные Базы Данных (Relational Database)||реляционной базой данных]], которая является [[Высокая Согласованность (Strong Consistency)||высокосогласованной]]? Почему они происходят?
 	- Медленные записи: синхронизация данных между [[Репликация (Replication)||репликами]] замедляет операции записи.
 	- Высокие задержки: синхронизация данных между узлами увеличивает время отклика.
@@ -238,10 +238,10 @@ HAVING
 	7. Профилировать Java-приложение для поиска медленных запросов.
 	8. Настроить [[Пул Соединений (Connection Pool)||пул соединений]] для оптимизации работы с базой данных.
 	9. Регулярно мониторить производительность и проводить тестирование.
-- Как Postgres обрабатывает механизмы [[Блокировки (Locking)||блокировки]] и как бы вы устраняли неполадки [[Deadlock||взаимоблокировок]] в приложении Java?
+- Как Postgres обрабатывает механизмы [[Блокировки (Locking)||блокировки]] и как бы вы устраняли неполадки [[Взаимная блокировка (Deadlock)||взаимоблокировок]] в приложении Java?
 	1. Включить логирование `deadlock` в PostgreSQL.
 	2. Обрабатывать исключение `SQLState 40P01` в Java и повторно выполнять [[Транзакция (Transaction)||транзакцию]].
-	3. Избегать [[Deadlock||взаимоблокировок]], упорядочив запросы и используя таймауты.
+	3. Избегать [[Взаимная блокировка (Deadlock)||взаимоблокировок]], упорядочив запросы и используя таймауты.
 
 ---
 ## Core Java
@@ -318,71 +318,357 @@ HAVING
 ---
 ## Spring
 
-Easy:
-- What is Spring Boot and how does it differ from the standart Spring Framework?
-- Explain the concept of auto-configuration in Spring boot. How does Spring Boot knows which configurations to apply?
-- What is the application context? What does the lifecycle of a Spring Boot Application look like?
-- What is the purpose of @PathVariable and @RequestParam annotations? How do they differ?
+##### Легко
 
-Medium:
-- How many servlets are un the Spring Application?
-- How to enable/disable logging of a particular class in Spring Application?
-- What is the purpose of profiles in Spring Boot? How do you activate a profile?
-- How do you handle exceptions in a Spring Boot Application? Provide an example using @ControllerAdvice or @ExceptionHandler
-- How can you configure multiple data sources in a Spring Boot Application?
-- What is lazy initialization in Spring Boot and how can you manage it in JPA relationships?
-- Explain the difference between Authentication and Authorization in the context of Spring Security. 
+- Что такое [[Spring Boot||Spring Boot]] и как он отличается от стандартного [[Спринг Фреймворк (Spring Framework)||Spring Framework]]?
+	- [[Спринг Фреймворк (Spring Framework)||Spring Framework]] = базовый спринг
+	- [[Spring Boot||Spring Boot]] = [[Спринг Фреймворк (Spring Framework)||Spring Framework]] + навароты для быстрого развёртывания приложений:
+		- [[Автоконфигурация (Spring Boot Auto Configuration)||Автоконфигурация]]: автоматически настраивает приложение на основе найденных зависимостей, минимизируя потребность в ручной настройке.
+		- [[{TODO} Сервер Приложений (Application Server)||Встроенные серверы]]: поддержка встроенных серверов (Tomcat, Jetty, Undertow), что позволяет запускать приложение без внешнего сервера.
+		- [[{TODO} Spring Boot Starter||Spring Boot Starter]]: набор шаблонов зависимостей, которые упрощают добавление стандартных библиотек в проект.
+		- [[{TODO} Spring Boot Actuator||Spring Boot Actuator]]: интеграция позволяющая легко добавлять функции мониторинга, метрик и управления приложением.
+		- [[{TODO} Spring Initializr||Spring Initializr]]: готовые проекты для различных типов приложений ([[Микросервис (Microservice)||микросервисы]], [[{TODO} Веб Приложение (Web Application)||веб-приложения]] и т.д.)
+- Что такое [[Автоконфигурация (Spring Boot Auto Configuration)||авто-конфигурация]] в [[Spring Boot||Spring Boot]]? Как [[Spring Boot||Spring Boot]] понимает какую конфигурацию применить?
+	- [[Автоконфигурация (Spring Boot Auto Configuration)||Авто-конфигурация]] = механизм, который автоматически настраивает [[Бин (Spring Bean)||бины Spring]] на основе зависимостей в [[Classpath||classpath]] и свойств в `application.properties` / `application.yml`
+	- Применяется на основе:
+		- **Classpath scanning** — проверяет, какие [[{TODO} Библиотека (Library)||библиотеки]] подключены.
+		- **[[{TODO} Conditional (аннотация)||@ConditionalOn..]]. аннотации** — активируют [[Бин (Spring Bean)||бины]] только при выполнении условий.
+		- `spring.factories / META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` — содержит список [[Автоконфигурация (Spring Boot Auto Configuration)||авто-конфигураций]], которые [[Spring Boot||Spring Boot]] загружает при старте.
+- Что такое [[Контекст Приложения (Application Context)||Application Context]]? Как выглядит жизненный цикл [[Spring Boot||Spring Boot]] приложения?
+	- [[Контекст Приложения (Application Context)||Application Context]] = центральный интерфейс [[Контейнер Инверсии Контроля в Спринг (Spring IoC Container)||контейнера в Spring]], который управляет [[Жизненный Цикл Бина (Bean Life Cycle)||жизненным циклом бинов]], зависимостями и конфигурацией приложения. Он предоставляет доступ к [[Бин (Spring Bean)||бинам]], ресурсам, событиям и другим функциям.
+	- Жизненный цикл Spring Boot приложения:
+		- **Запуск** (SpringApplication.run()) — инициализация [[Контекст Приложения (Application Context)||ApplicationContext]], сканирование компонентов.
+		- **Создание и настройка [[Бин (Spring Bean)||бинов]]** — внедрение зависимостей, обработка аннотаций ([[{TODO} Component (аннотация)||@Component]], [[{TODO} Service (аннотация)||@Service]], [[{TODO} Bean (аннотация)||@Bean]] и др.).
+		- **Готовность приложения** — запуск встроенного [[Веб Сервер (Web Server)||веб-сервера]] (если используется), обработка запросов.
+		- **Завершение работы** — вызов [[{TODO} PreDestroy (аннотация)||@PreDestroy]], [[{TODO} DisposableBean||DisposableBean]], освобождение ресурсов перед остановкой.
+- Для чего существуют аннотации [[{TODO} PathVariable (аннотация)||@PathVariable]] и [[{TODO} RequestParam (аннотация)||@RequestParam]]? Чем они отличаются?
+	- [[{TODO} PathVariable (аннотация)||@PathVariable]] = ожидаемый параметр в GET запросе (в URL).
+	- [[{TODO} RequestParam (аннотация)||@RequestParam]] = ожидаемый параметр в POST запросе (в body).
 
-Difficult:
-- What is AOP? What are the use cases of using aspects in spring application?
-- How do you handle transactions in Spring Boot? Explain the use of @Transactional. Explain the «read-only» and «timeout» parameters of transactional annotation.
-- How will 1000 http reuests (sent at the same time) be handled in spring application with default configuration – all in parallel or sequentially?
-- How does Spring Boot handle CORS? Can you configure it for your application?
-- What are some common ways to secure REST APIs in Spring Boot?
-- What is the purpose of the @PreAuthorize and @PostAuthorize annotations in Spring Security?
-- How do you implement OAuth2 authentication in a Spring Boot application?
+##### Средне
+
+- Сколько [[Сервлет (Servlet)||сервлетов]] в [[Спринг Фреймворк (Spring Framework)||Spring]] приложении?
+	- В [[Спринг Фреймворк (Spring Framework)||Spring]]-приложении обычно один [[Сервлет (Servlet)||сервлет]] — [[DispatcherServlet||DispatcherServlet]].
+- Как включить/выключить логи конкретного класса в [[Спринг Фреймворк (Spring Framework)||Spring]] приложении?
+	- В `application.properties` / `application.yml`:
+```properties
+logging.level.com.example.MyClass=DEBUG  # Включить  
+logging.level.com.example.MyClass=OFF    # Выключить  
+```
+- В `logback.xml`:
+```xml
+<logger name="com.example.MyClass" level="DEBUG"/>
+<logger name="com.example.MyClass" level="OFF"/>
+```
+- В `log4j2.xml`:
+```xml
+<Logger name="com.example.MyClass" level="DEBUG"/>
+<Logger name="com.example.MyClass" level="OFF"/>
+```
+Через [[{TODO} Spring Boot Actuator||Actuator]]:
+```bash
+curl -X POST "http://localhost:8080/actuator/loggers/com.example.MyClass" -H "Content-Type: application/json" -d '{"configuredLevel": "DEBUG"}'
+```
+- Зачем нужны [[Spring Boot Profile||профили]] в [[Spring Boot||Spring Boot]]? Как активировать профиль?
+	- [[Spring Boot Profile||Spring Boot профили]] используются для управления конфигурацией приложения в разных средах (например, `dev`, `test`, `prod`). Они позволяют загружать специфичные настройки, например, [[База данных (Database)||базы данных]] или логирования.
+	- Активировать профиль можно через:
+		- Переменную среды: `SPRING_PROFILES_ACTIVE=prod`
+		- Флаг [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]]: `-Dspring.profiles.active=prod`
+		- `application.properties`: `spring.profiles.active=prod`
+- Как обрабатывать исключения в [[Spring Boot||Spring Boot]] приложении? Приведите примеры с использованием [[ControllerAdvice (аннотация)||@ControllerAdvice]] или [[ExceptionHandler (аннотация)||@ExceptionHandler]].
+	- В [[Spring Boot||Spring Boot]] для обработки [[Исключение (Exception)||исключений]] можно использовать [[ControllerAdvice (аннотация)||@ControllerAdvice]], чтобы централизованно перехватывать ошибки во всех контроллерах. Используя [[ExceptionHandler (аннотация)||@ExceptionHandler]], можно обрабатывать конкретные исключения, например:
+```java
+@ControllerAdvice
+public class GlobalExceptionHandler {
+	
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<String> handleRuntimeException(RuntimeException ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                             .body("Ошибка: " + ex.getMessage());
+    }
+}
+```
+- Как использовать несколько источников данных в [[Spring Boot||Spring Boot]] приложении?
+	- Конфигурация источников данных:
+```java
+@Bean(name = "primaryDataSource")
+public DataSource dataSourcePrimary() {
+    return DataSourceBuilder.create().build();
+}
+
+@Bean(name = "secondaryDataSource")
+public DataSource dataSourceSecondary() {
+    return DataSourceBuilder.create().build();
+}
+```
+- Использование [[{TODO} Qualifier (аннотация)||@Qualifier]] в [[{TODO} Репозиторий (Repository)||репозиториях]]:
+```java
+@Repository
+public class MyRepository {
+
+    @Autowired
+    @Qualifier("primaryDataSource")
+    private DataSource dataSource;
+}
+```
+- Конфигурация в `application.yml`:
+```yaml
+spring:
+  datasource:
+    primary:
+      url: jdbc:mysql://localhost:3306/db1
+    secondary:
+      url: jdbc:mysql://localhost:3306/db2
+```
+
+- Что такое [[Ленивая Инициализация (Lazy Initialization)||ленивая инициализация в Spring Boot]] и как ей управлять в [[JPA (Java Persistence API)||JPA]] отношениях?
+	- Ленивая инициализация (Lazy Initialization) в [[JPA (Java Persistence API)||JPA]] загружает связанные данные только при первом доступе. 
+	- Чтобы управлять:
+		- Используйте [[Transactional (аннотация)||@Transactional]] для работы в пределах транзакции.
+		- Применяйте [[{TODO} EntityGraph (аннотация)||@EntityGraph]] для явной загрузки данных.
+		- Для немедленной загрузки используйте [[{TODO} JPA Fetch Types||FetchType.EAGER]].
+- Объясните разницу между [[Аутентификация (Authentication)||Аутентификацией]] и [[Авторизация (Authorization)||Авторизацией]] в контексте [[Spring Security||Spring Security]].
+	- [[Аутентификация (Authentication)||Аутентификация]] = проверка личности пользователя (логин, пароль, [[{TODO} JWT||JWT]]). “Кто ты?”
+	- [[Авторизация (Authorization)||Авторизация]] – проверка прав доступа (можно ли открыть страницу / выполнить действие). “Что тебе разрешено?”
+	- В [[Spring Security||Spring Security]]:
+		- [[Аутентификация (Authentication)||Аутентификация]] → AuthenticationManager, UserDetailsService.
+		- [[Авторизация (Authorization)||Авторизация]] → @PreAuthorize, hasRole(), http.authorizeHttpRequests().
+
+
+##### Сложно
+
+- Что такое [[Аспектно-Ориентированное Программирование (AOP, Aspect Oriented Programming)||АОП]]? Как аспекты применяются в [[Спринг Фреймворк (Spring Framework)||Spring]] приложении?
+	- [[Аспектно-Ориентированное Программирование (AOP, Aspect Oriented Programming)||AOP (Aspect-Oriented Programming)]] = парадигма программирования, разделяющая кросс-функциональные задачи от основной логики.
+	- Применение в [[Спринг Фреймворк (Spring Framework)||Spring]] = использование аннотаций [[{TODO} Aspect (аннотация)||@Aspect]] для внедрения функциональности (например, логирования или транзакций) через прокси-объекты.
+- Как обрабатывать [[Транзакция (Transaction)||транзакции]] в [[Spring Boot||Spring Boot]]? Расскажите про [[Transactional (аннотация)||@Transactional]]. Объясните для чего используются параметры «read-only» и «timeout» в [[Transactional (аннотация)||@Transactional]] аннотации. 
+	- В [[Spring Boot||Spring Boot]] транзакции обрабатываются с помощью [[Transactional (аннотация)||аннотации @Transactional]], которая позволяет указать, что метод должен быть выполнен в рамках [[Транзакция (Transaction)||транзакции]].
+	- Параметры:
+		- **readOnly**: Устанавливает транзакцию как доступную только для чтения. Это может улучшить производительность, если данные не изменяются, так как [[База данных (Database)||база данных]] может оптимизировать выполнение запросов.
+		- **timeout**: Устанавливает максимальное время ожидания для выполнения [[Транзакция (Transaction)||транзакции]]. Если [[Транзакция (Transaction)||транзакция]] не завершится вовремя, она будет отменена. 
+- Как будут обработаны 1000 [[{TODO} HTTP Запрос||запросов]], одновременно отправленных в [[Спринг Фреймворк (Spring Framework)||Spring]] приложение со стандартной конфигурацией: параллельно или последовательно?
+	- Запросы будут обрабатываться параллельно, но ограничены количеством [[Поток (Thread)||потоков]] в [[Thread Pool||пуле]] [[Веб Сервер (Web Server)||веб-сервера]] (встроенного в [[Спринг Фреймворк (Spring Framework)||Spring]]). Если [[{TODO} HTTP Запрос||запросов]] больше, чем доступных [[Поток (Thread)||потоков]], они будут ждать в [[Очередь (Queue)||очереди]].
+- Как [[Spring Boot||Spring Boot]] работает с [[CORS||CORS]]? Можно ли настроить механизм работы?
+	- **Аннотация [[CrossOrigin (аннотация)||@CrossOrigin]]** = используется для настройки [[CORS||CORS]] на уровне контроллеров или методов (например, `@CrossOrigin(origins = "http://example.com")`).
+	- **Глобальная настройка** = осуществляется через реализацию `WebMvcConfigurer` и метод `addCorsMappings()`, где можно задать разрешенные источники и методы для всех эндпоинтов.
+- Какие есть способы защиты [[{TODO} REST||REST API]] в [[Spring Boot||Spring Boot]]?
+	- [[Аутентификация (Authentication)||Аутентификация]] и [[Авторизация (Authorization)||авторизация]]:
+		- [[{TODO} JWT||JWT]]
+		- Basic Auth
+		- [[OAuth 2.0||OAuth2]]
+	- Защита от атак:
+		- [[{TODO} CSRF (межсайтовая подделка запроса)||CSRF]] (для web-приложений)
+		- [[CORS||CORS]] (для ограничений по доменам)
+	- Шифрование данных: [[{TODO} HTTPS||HTTPS]]/SSL/TLS для защиты передачи данных.
+	- Ограничение скорости запросов = использование Rate Limiting (например, с Bucket4j или Resilience4j).
+	- Фильтры и interceptor-ы = для [[Аутентификация (Authentication)||аутентификации]], логирования и проверки запросов.
+	- Роли и разрешения = конфигурация ролей и прав доступа с помощью [[Spring Security||Spring Security]].
+	- Защита от [[{TODO} SQL Инъекция (SQL Injection)||SQL инъекций]] = использование подготовленных выражений и [[Объектно-Реляционное Отображение (Object-Relational Mapping, ORM)||ORM]] ([[JPA (Java Persistence API)||JPA]]).
+	- Логирование и мониторинг = логирование запросов и использование [[{TODO} Spring Boot Actuator||Spring Actuator]] для мониторинга.
+- Для чего существуют аннотации [[PreAuthorize (аннотация)||@PreAuthorize]] и [[PostAuthorize (аннотация)||@PostAuthorize]] в [[Spring Boot||Spring Boot]]?
+	- [[PreAuthorize (аннотация)||@PreAuthorize]] = для проверки прав доступа до выполнения метода, предоставляя возможность ограничить доступ на основе выражений безопасности. 
+	- [[PostAuthorize (аннотация)||@PostAuthorize]] = проверка прав доступа после выполнения метода, что позволяет принимать решения о доступе на основе результата выполнения метода.
+- Как имплементировать [[Аутентификация (Authentication)||аутентификацию]] [[OAuth 2.0||OAuth2]] в [[Spring Boot||Spring Boot]] приложении?
+	- Добавить зависимости в `pom`
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-oauth2-client</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+```
+	- Настроить `application.yaml`
+```yaml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: your-client-id
+            client-secret: your-client-secret
+            scope: profile, email
+```
+	- Создать конфигурацию [[Spring Security||Spring Security]]
+```java
+@Configuration
+public class SecurityConfig {
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests(auth -> auth
+                .requestMatchers("/", "/public").permitAll()
+                .anyRequest().authenticated())
+            .oauth2Login(oauth2 -> oauth2.defaultSuccessUrl("/welcome", true))
+            .logout(logout -> logout.logoutSuccessUrl("/").permitAll());
+        return http.build();
+    }
+}
+```
+	- Добавить [[{TODO} Контроллер (Controller)||контроллер]]
+```java
+@RestController
+public class AuthController {
+    @GetMapping("/welcome")
+    public Map<String, Object> secured(@AuthenticationPrincipal OidcUser user) {
+        return Map.of("name", user.getFullName(), "email", user.getEmail());
+    }
+}
+```
+	- Запустить
 
 ---
 ## Concurrency
 
-Easy:
-- What do you understand about Thread Priority?
-- Which is more preffered – synchronised method or synchronized block
-- What is ThreadLocal?
+##### Легко
 
-Medium:
-- What is a Vilotile Field and What Guarantees Does Java Hold for Such field?
-- Which of the following Operations are Atomic?
-	- writing to a non-vilotile int;
-	- writing to a vilotile int;
-	- writing to a non-vliotilale long;
-	- writing to a vliotilale long;
-	- incrementing a vilotile long;
+- Как вы понимаете [[Приоритет Потока (Thread Priority)||Thread Priority]]?
+	- Thread Priority = приоритет потока
+	- Значения от 1 до 10 (стандартное – 5)
+	- Не гарантирует реального приоритета. Это решают [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]] и [[{TODO} Операционная Система (ОС, Operating System, OS)||OS]]
+- Что предпочтительнее: [[Синхронизация Потоков (synchronized)||synchronised]]-блок или [[Синхронизация Потоков (synchronized)||synchronised]]-метод?
+	- Метод = для защиты всего метода от конкуренции, для простоты и понятности.
+	- Блок = для синхронизации критической секции внутри метода, для тонкого повышения производительности.
+- Что такое [[ThreadLocal||ThreadLocal]]?
+	- [[ThreadLocal||ThreadLocal]] = механизм, позволяющий каждому [[Поток (Thread)||потоку]] хранить собственный экземпляр переменной. 
 
-- Why Thread sleep() and yield() methods are static?
-- What is Race Condition?
-- [[CAS (Compare-And-Swap)||What is CAS (Compare and Swap)]]
-- What are the differences between the synchronized keyword and explicid locks (like ReentrantLock)?
-- Explain if that code is thread safe and if not – why?
+##### Средне
 
-```
+- Что такое [[volatile||volatile]] и какие гарантии даёт эта метка?
+	- [[volatile||volatile]] = ключевое слово для видимости переменной в [[Многопоточное Программирование (Многопоточка, Multithreading)||многопоточной среде]].
+	- Гарантии:
+		- Видимость = если изменена одним [[Поток (Thread)||потоком]], то остальные видят. 
+		- Запрет [[{TODO} Кэш (Cache)||кэширования]] = всегда читается из основной памяти. 
+		- Отсутствие [[Атомарность (Atomacy)||атомарности]] = не гарантирует атомарность
+- Какие из следующих операций – [[Атомарность (Atomacy)||атомарные]]:
+	- `запись в не-vilotile int;` = атомарно, если тип данных имеет размер, поддерживаемый процессором (например, 32-битный int).
+	- `запись в vilotile int;` = не атомарно, поскольку [[volatile||volatile]] лишь указывает на возможное изменение значения из других потоков, не обеспечивая синхронизации.
+	- `запись в не-vliotilale long;` = атомарно на 64-битных системах, но не гарантируется на 32-битных.
+	- `запись в vliotilale long;` = не атомарно, поскольку [[volatile||volatile]] не гарантирует атомарности.
+	- `инкремент vilotile long;` = не атомарно, поскольку операция инкремента включает чтение, изменение и запись значения.
+- Почему методы `sleep()` и `yield()` класса [[Поток (Thread)||Thread]] – статические?
+	- `sleep()` — приостанавливает выполнение текущего [[Поток (Thread)||потока]] на заданный промежуток времени.
+	- `yield()` — передает управление другому [[Поток (Thread)||потоку]], если он готов к выполнению.
+	- Статические, потому что они управляют текущим [[Поток (Thread)||потоком]], а не требуют создания экземпляра класса [[Поток (Thread)||Thread]]
+- Что такое [[Состояние Гонки (Race Condition)||Состояние Гонки]]?
+	- [[Состояние Гонки (Race Condition)||Состояние Гонки (Race Condition)]] = несколько [[Поток (Thread)||потоков]] одновременно пытаются получить доступ к общим данным или ресурсу, и результат зависит от порядка их выполнения.
+- Что такое [[CAS (Compare-And-Swap)||CAS (Compare-And-Swap)]]?
+	- [[CAS (Compare-And-Swap)||CAS]] = [[Атомарность (Atomacy)||атомарная]] операция, которая используется для безопасного изменения значения переменной в [[Многопоточное Программирование (Многопоточка, Multithreading)||многозадачных]] программах.
+	- Алгоритм:
+		- Проверяем, что текущее значение равно тому, что мы ожидаем.
+		- Если да – меняем на новое. 
+		- Если нет – ничего не меняем. 
+- В чём разница между [[Синхронизация Потоков (synchronized)||synchronized]] и прямыми [[Локи (Locks)||локами]] (например, [[ReentrantLock||ReentrantLock]])?
+	- [[Синхронизация Потоков (synchronized)||Synchronized]] =  простая низкоуровневая синхронизация, встроенная в язык Java, но с ограниченной гибкостью.
+	- [[ReentrantLock||ReentrantLock]] = больше возможностей, таких как тайм-ауты и прерывание ожидания, и позволяет повторно захватывать блокировки.
+- Потокобезопасен ли следующий код и почему?
+  
+```java
+// Не потокобезопасен потому что:
+// 1. i – не защищена синхронизацией или атомиком
+// 2. i++ – не атомарна, в ней 3 шага (чтение -> увеличение -> запись)
+
 public class Controller {
 	private int i;
 	
-	@PostMapping(value = «»test»»)
+	@PostMapping(value = "test")
 	void m() {
 		i++;
 	}
 }
+
+// Решение 1: Атомики
+
+public class Controller {
+	private AtomicInteger i = new AtomicInteger(0);
+	
+	@PostMapping(value = "test")
+	void m() {
+	    i.incrementAndGet();  // Атомарный инкремент
+	}
+}
+
+// Решение 2: Синхронизация
+
+public class Controller {
+	private int i;
+	
+	@PostMapping(value = "test")
+	synchronized void m() {
+	    i++;
+	}
+}
 ```
 
-Difficult:
-- If two threads call a synchronized method on different object instances simultaneously, could one of these threads block? What if the method is static?
-- What are the Available Implementations of ExecutorService in the Standart library?
-- Describe the conditions of Deadlock, livelock and Starvation. Describe the possible causes of these conditions.
-- Explain Java’s ForkJoinPool. How does it differ from ThreadPoolExecutor?
-- What are some common concurrency isuues in Java and how would you prevent them?
-- What is Happens-Before?
+##### Сложно
+
+- Если два [[Поток (Thread)||потока]] вызывают [[Синхронизация Потоков (synchronized)||synchronized]]-метод на разных [[Объект (Object)||объектах]] одного [[Класс (Class)||класса]] одновременно, могут ли они друг друга заблокировать? Что если этот метод – [[static||статический]]?
+	- Если метод не статический = нет. Блокировка действует на уровень [[Объект (Object)||объекта]], а у [[Поток (Thread)||потоков]] разные [[Объект (Object)||объекты]].
+	- Если метод статический = да. Блокировка действует на уровень [[Класс (Class)||класса]], и [[Поток (Thread)||потоки]] будут ждать друг друга.
+- Какие имплементации [[ExecutorService||ExecutorService]] доступны в стандартной библиотеке?
+	- **ThreadPoolExecutor** – гибкий [[Thread Pool||пул потоков]], настраиваемый вручную.
+	- **ScheduledThreadPoolExecutor** – поддерживает отложенные и периодические задачи.
+	- Фабричные методы `Executors`:
+		- `newFixedThreadPool(n)` – фиксированный пул.
+		- `newCachedThreadPool()` – динамический пул.
+		- `newSingleThreadExecutor()` – один поток.
+		- `newScheduledThreadPool(n)` – планировщик задач.
+		- `newSingleThreadScheduledExecutor()` – однотопоточный планировщик.
+- Опишите условия возникновения [[Взаимная блокировка (Deadlock)||Deadlock]], [[Живая Блокировка (Livelock)||Livelock]] и [[Голодание (Starvation)||Starvation]]. Назовите возможные причины их возникновения.
+	- [[Взаимная блокировка (Deadlock)||Deadlock (взаимная блокировка)]]:
+		- Суть = ситуация, когда несколько [[Поток (Thread)||потоков]] ждут друг друга, чтобы освободился нужный ресурс, но никто его освободить не может.
+		- Причина = каждый [[Поток (Thread)||поток]] держит один ресурс и ждет другой, создавая “замкнутый круг”.
+	- [[Живая Блокировка (Livelock)||Livelock (ожившая блокировка)]]:
+		- Суть = [[Поток (Thread)||потоки]] пытаются выйти из [[Взаимная блокировка (Deadlock)||взаимоблокировки]], но вместо прогресса бесконечно реагируют друг на друга, не продвигаясь дальше.
+		- Причина = оба [[Поток (Thread)||потока]] пытаются избежать конфликта, но их действия приводят к бесконечному циклу (например, оба постоянно освобождают и запрашивают ресурс заново).
+	- [[Голодание (Starvation)||Starvation (голодание)]]:
+		- Суть = [[Поток (Thread)||поток]] не получает доступ к ресурсу, потому что другие [[Поток (Thread)||потоки]] с более высоким [[Приоритет Потока (Thread Priority)||приоритетом]] постоянно его перехватывают.
+		- Причина = система управления ресурсами отдает приоритет одним [[Поток (Thread)||потокам]], игнорируя другие.
+- Расскажите про [[ForkJoinPool||ForkJoinPool]]. Чем он отличается от [[ThreadPoolExecutor||ThreadPoolExecutor]]?
+	- [[ForkJoinPool||ForkJoinPool]] = для задач, которые могут быть рекурсивно разделены на подзадачи, с оптимизацией через “work stealing” для эффективного распределения работы между [[Поток (Thread)||потоками]].
+	- [[ThreadPoolExecutor||ThreadPoolExecutor]] = для общего управления [[Поток (Thread)||потоками]] с [[Очередь (Queue)||очередями]] задач, подходя для менее сложных задач и стабильного выполнения больших рабочих нагрузок.
+- Какие частые проблемы с [[Многопоточное Программирование (Многопоточка, Multithreading)||многопоточностью]] возникают в Java и как их решать?
+	- [[Состояние Гонки (Race Condition)||Состояние гонки (Race Condition)]]
+		- **Проблема**: Несколько [[Поток (Thread)||потоков]] изменяют общие данные без [[Синхронизация Потоков (synchronized)||синхронизации]].
+		- **Решение**: [[Синхронизация Потоков (synchronized)||synchronized]], [[ReentrantLock||ReentrantLock]], [[Атомики (Atomics)||Atomic-классы]], [[volatile||volatile]] (если нужна только видимость изменений).
+	- [[Взаимная блокировка (Deadlock)||Взаимная Блокировка (Deadlock)]]
+		- **Проблема**: [[Поток (Thread)||Потоки]] навсегда заблокированы из-за циклического ожидания ресурсов.
+		- **Решение**: Фиксированный порядок блокировок, `tryLock()` с таймаутом.
+	- [[Живая Блокировка (Livelock)||Живая Блокировка (Livelock)]]
+		- **Проблема**: [[Поток (Thread)||Потоки]] не блокируются, но продолжают менять состояния, не выполняя полезной работы.
+		- **Решение**: Рандомизация ожидания, отказ от агрессивных повторных попыток.
+	- [[Голодание (Starvation)||Голодание (Starvation)]]
+		- **Проблема**: [[Поток (Thread)||Поток]] не получает доступа к ресурсу из-за [[Приоритет Потока (Thread Priority)||приоритетов]] или блокировок.
+		- **Решение**: Использование справедливых блокировок ([[ReentrantLock||ReentrantLock(true)]], [[{TODO} Честный Семафор (Fair Semaphore)||Fair Semaphore]]).
+	- Неправильная видимость данных (Visibility Issue)
+		- **Проблема**: [[Поток (Thread)||Потоки]] видят устаревшее состояние переменной.
+		- **Решение**: [[volatile||volatile]], [[Синхронизация Потоков (synchronized)||synchronized]], [[Атомики (Atomics)||Atomic-классы]].
+	- Разупорядочивание инструкций (Instruction Reordering)
+		- **Проблема**: Оптимизация [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]] или процессора меняет порядок исполнения.
+		- **Решение**: [[volatile||volatile]], [[Синхронизация Потоков (synchronized)||synchronized]], [[{TODO} MemoryBarrier||MemoryBarrier]] в Unsafe.
+	- Ошибка публикации (Publication Issue)
+		- **Проблема**: [[Объект (Object)||Объект]] доступен другим [[Поток (Thread)||потокам]] до полной инициализации.
+		- **Решение**: Инициализация в конструкторе, [[volatile||volatile]], [[final||final]] поля.
+	- Ожидание на изменяемом объекте (Mutable Object as [[Локи (Locks)||Lock]])
+		- **Проблема**: Изменяемый объект используется как монитор блокировки.
+		- **Решение**: [[final||final]] объекты для блокировок.
+	- [[ThreadLocal||ThreadLocal]] Memory Leak
+		- **Проблема**: [[Поток (Thread)||Потоки]] не освобождают [[ThreadLocal||ThreadLocal]]-данные, вызывая утечки памяти.
+		- **Решение**: `remove()` после использования.
+	- Проблемы с [[ForkJoinPool||ForkJoinPool]] и [[CompletableFuture||CompletableFuture]]
+		- **Проблема**: [[Поток (Thread)||Потоки]] могут не завершаться или блокировать выполнение.
+		- **Решение**: Ограничение числа [[Поток (Thread)||потоков]], `join()` вместо `get()`, `handle()` для исключений.
+- Что такое [[Happens Before||Happens-Before]]?
+	- [[Happens Before||Happens Before]] = правило, определяющее порядок выполнения операций в [[Многопоточное Программирование (Многопоточка, Multithreading)||многопоточности]] и гарантии их видимости.
+	- Гарантии:
+		- Последовательность в одном [[Поток (Thread)||потоке]] – код выполняется сверху вниз, без неожиданных перестановок.
+		- Синхронизация ([[Синхронизация Потоков (synchronized)||synchronized]]) – выход из блока [[Синхронизация Потоков (synchronized)||synchronized]] одним потоком гарантирует, что другой [[Поток (Thread)||поток]], входя в этот блок, увидит актуальные данные.
+		- [[volatile||volatile]] переменные – запись в [[volatile||volatile]] поле всегда видна всем [[Поток (Thread)||потокам]], читающим его после записи.
+		- Запуск и завершение [[Поток (Thread)||потока]] – если [[Поток (Thread)||поток]] завершился, другие потоки, вызвавшие `Thread.join()`, увидят его изменения.
+		- Использование [[Локи (Locks)||Lock]] – разблокировка [[Локи (Locks)||Lock]] одним [[Поток (Thread)||потоком]] делает изменения доступными для другого, который получит этот [[Локи (Locks)||Lock]].
+		- Очереди (Executor, BlockingQueue) – передача данных через потокобезопасные очереди гарантирует, что потребитель увидит данные после их отправки.
+
 
 ---
 ## Design patterns

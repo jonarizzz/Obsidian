@@ -1,4 +1,4 @@
-Java управляет памятью автоматически с помощью [[{TODO} JVM||JVM]] и [[Сборщик Мусора (Garbage Collector)||Garbage Collector]].
+Java управляет памятью автоматически с помощью [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]] и [[Сборщик Мусора (Garbage Collector)||Garbage Collector]].
 
 ### Основные области памяти:
 

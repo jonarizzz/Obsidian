@@ -1,18 +1,25 @@
 **Happens Before** — это отношение между операциями, которое гарантирует, что результат одной операции будет виден другой, если между ними установлено это отношение. Оно используется в [[Многопоточное Программирование (Многопоточка, Multithreading)||многопоточной среде]] для предсказуемого поведения памяти и [[Синхронизация Потоков (synchronized)||синхронизации потоков]].
 
-### Основные принципы Happens Before:
+### Основные принципы Happens Before
 
-- Правило порядка внутри потока (Program Order Rule): В одном [[Поток (Thread)||потоке]] все операции происходят в том порядке, в котором они написаны в коде.
-- Правило мониторной блокировки (Monitor Lock Rule): Разблокировка [[Синхронизация Потоков (synchronized)||synchronized-блока]] одним потоком happens before его последующей блокировки другим потоком.
-- Правило volatile (Volatile Variable Rule): Запись в переменную, объявленную [[volatile||volatile]], happens before последующего чтения из неё.
-- Правило запуска потока (Thread Start Rule): Вызов `Thread.start()` happens before любой код в запущенном [[Поток (Thread)||потоке]].
-- Правило завершения потока (Thread Termination Rule): Завершение [[Поток (Thread)||потока]] happens before того, как другой поток обнаружит его завершение с помощью `Thread.join()` или `Thread.isAlive()`.
-- Правило прерывания потока (Thread Interruption Rule): Вызов `Thread.interrupt()` happens before обнаружения прерывания с помощью `Thread.isInterrupted()` или [[{TODO} InterruptedException||InterruptedException]].
-- Правило завершения статической инициализации (Finalizer Rule): Завершение конструктора объекта happens before начала работы метода `finalize()`.
-- Транзитивность: Если `A` happens before `B`, а `B` happens before `C`, то `A` happens before `C`.
+- **Правило порядка внутри потока (Program Order Rule)**: В одном [[Поток (Thread)||потоке]] все операции происходят в том порядке, в котором они написаны в коде.
+  
+- **Правило мониторной блокировки (Monitor Lock Rule)**: Разблокировка [[Синхронизация Потоков (synchronized)||synchronized-блока]] одним потоком _happens before_ его последующей блокировки другим [[Поток (Thread)||потоком]].
+  
+- **Правило volatile (Volatile Variable Rule):** Запись в переменную, объявленную [[volatile||volatile]], _happens before_ последующего чтения из неё.
+  
+- **Правило запуска потока (Thread Start Rule):** Вызов `Thread.start()` _happens before_ любой код в запущенном [[Поток (Thread)||потоке]].
+  
+- **Правило завершения потока (Thread Termination Rule):** Завершение [[Поток (Thread)||потока]] _happens before_ того, как другой поток обнаружит его завершение с помощью `Thread.join()` или `Thread.isAlive()`.
+  
+- **Правило прерывания потока (Thread Interruption Rule):** Вызов `Thread.interrupt()` _happens before_ обнаружения прерывания с помощью `Thread.isInterrupted()` или [[{TODO} InterruptedException||InterruptedException]].
+  
+- **Правило завершения статической инициализации (Finalizer Rule):** Завершение конструктора объекта _happens before_ начала работы метода `finalize()`.
+  
+- **Транзитивность:** Если `A` _happens before_ `B`, а `B` _happens before_ `C`, то `A` _happens before_ `C`.
 
 
-### Пример:
+### Пример
 
 ```java
 class Example {

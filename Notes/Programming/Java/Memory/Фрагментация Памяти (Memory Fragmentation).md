@@ -31,7 +31,7 @@
 
 - Использовать подходящий [[Сборщик Мусора (Garbage Collector)||GC]] (например, [[G1 GC||G1]] или [[ZGC||ZGC]] для больших приложений с низкими паузами).
 - Оптимизировать аллокации (избегать ненужного создания больших [[Объект (Object)||объектов]]).
-- Тюнить параметры [[{TODO} JVM||JVM]] (`-XX:+UseG1GC`, `-XX:InitiatingHeapOccupancyPercent`, `-XX:SurvivorRatio` и т. д.).
+- Тюнить параметры [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]] (`-XX:+UseG1GC`, `-XX:InitiatingHeapOccupancyPercent`, `-XX:SurvivorRatio` и т. д.).
 
 
 Фрагментация памяти — это обычное явление, но современные [[Сборщик Мусора (Garbage Collector)||GC]] в Java достаточно эффективны в её устранении.

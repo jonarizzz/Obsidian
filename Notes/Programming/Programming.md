@@ -3,7 +3,7 @@
 #### [[Code Structure]]
 #### [[Java]]
 #### [[{TODO} Hibernate]]
-#### [[{TODO} Spring]]
+#### [[Спринг Фреймворк (Spring Framework)]]
 #### [[Databases]]
 #### [[Web]]
 #### [[Architecture and System Design]]

@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "a18d4f777abdcafb",
+        "id": "f2e25b2444834758",
         "type": "tabs",
         "children": [
           {
-            "id": "73e158e5b60c7877",
+            "id": "69eba1886ed81410",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Interview Questions.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "Interview Questions"
             }
           }
         ]
@@ -49,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "race condi",
+                "query": "fork",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 490.5
+    "width": 432.5
   },
   "right": {
     "id": "5a1a1d4103f51ad1",
@@ -136,10 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Programming/Computer Science/Алгоритмы/Поиск/Жадные алгоритмы/Алгоритм Краскала.md"
+                "file": "Interview Questions.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Алгоритм Краскала"
+              "title": "Структура Interview Questions"
             }
           }
         ],
@@ -160,44 +177,44 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "73e158e5b60c7877",
+  "active": "69eba1886ed81410",
   "lastOpenFiles": [
-    "Currency.com.md",
-    "Notes/Programming/Java/Multithreading/Локи (Locks).md",
-    "Notes/Programming/Java/Memory/Shenandoah GC.md",
-    "Notes/Programming/Java/Java Versions/{TODO} Java 12.md",
-    "Notes/Programming/Java/Memory/Сборщик Мусора (Garbage Collector).md",
-    "Notes/Programming/Java/Memory/Parallel GC.md",
-    "Notes/Programming/Java/Memory/G1 GC.md",
-    "Notes/Programming/Java/Memory/ZGC.md",
-    "Notes/Programming/Java/Memory/Serial GC.md",
-    "Notes/Programming/Java/Memory/Фрагментация Памяти (Memory Fragmentation).md",
-    "Notes/Programming/Java/Memory/Heap (Область Памяти).md",
-    "Notes/Programming/Java/Java Versions/{TODO} Java 7.md",
-    "Notes/Programming/Java/Java Versions/{TODO} Java 15.md",
-    "Notes/Programming/Java/Java Versions/{TODO} Java 11.md",
-    "Notes/Programming/Java/Data Structures/Wrappers/{TODO} Integer.md",
-    "Notes/Programming/Java/Data Structures/Wrappers",
-    "Notes/Programming/Databases/Соединение с БД (DB Connection).md",
-    "Notes/Programming/Patterns/Пул Объектов (паттерн).md",
     "Notes/Programming/Java/Multithreading/Happens Before.md",
-    "Notes/Programming/Java/Data Structures/Exceptions/{TODO} InterruptedException.md",
-    "Notes/Programming/Java/Multithreading/Гонки Данных (Data Races).md",
-    "Notes/Programming/Java/Multithreading/Состояние Гонки (Race Condition).md",
-    "Notes/Programming/Unsorted/Атомики.md",
-    "Notes/Programming/Unsorted/Проблемы многопоточности.md",
-    "Notes/Programming/Java/Multithreading/Java Memory Model.md",
-    "Notes/Programming/{TODO} Кэш (Cache).md",
-    "Notes/Programming/Unsorted/{TODO} Правила “большого пальца”.md",
-    "Notes/Programming/Java/Serialization",
-    "Notes/Programming/Web",
-    "Notes/Programming/Java/Java Versions",
-    "Notes/Programming/Patterns",
-    "Notes/Programming/Java/Memory/Reference",
-    "Notes/Programming/Java/Data Structures/Exceptions",
+    "Interview Questions.md",
+    "Notes/Programming/Java/Multithreading/{TODO} Честный Семафор (Fair Semaphore).md",
+    "{TODO} MemoryBarrier.md",
+    "Notes/Programming/Data Structures/{TODO} Двусторонняя Очередь (Deque).md",
+    "Notes/Programming/Data Structures/{TODO} Deque.md",
+    "Notes/Programming/Java/Data Structures/Collections/ConcurrentLinkedDeque.md",
+    "Notes/Programming/Java/Multithreading/ThreadPoolExecutor.md",
+    "Notes/Programming/Java/Multithreading/Многопоточное Программирование (Многопоточка, Multithreading).md",
+    "Notes/Programming/Java/Multithreading/ForkJoinPool.md",
+    "Notes/Programming/Java/Multithreading/Thread Pool.md",
+    "Notes/Programming/Java/Multithreading/Parallel Streams.md",
+    "Notes/Programming/Java/Multithreading/Fork Join Framework.md",
+    "Notes/Programming/Algorithms/{TODO} Разделяй и властвуй.md",
+    "Notes/Programming/Java/Multithreading/ExecutorService.md",
+    "Notes/Programming/Java/Multithreading/Problems/Живая Блокировка (Livelock).md",
+    "Notes/Programming/Java/Multithreading/Problems/Взаимная блокировка (Deadlock).md",
+    "Notes/Programming/Java/Multithreading/Problems/Голодание (Starvation).md",
+    "Notes/Programming/Java/Multithreading/Problems/Гонки Данных (Data Races).md",
+    "Notes/Programming/Java/Multithreading/Problems",
+    "Notes/Programming/Java/Data Structures/ReentrantLock.md",
+    "Notes/Programming/Java/Multithreading/Локи (Locks).md",
+    "Notes/Programming/Java/Data Structures/Maps/ConcurrentHashMap.md",
+    "Notes/Programming/Algorithms/CAS (Compare-And-Swap).md",
+    "Notes/Programming/Java/Multithreading/Problems/Состояние Гонки (Race Condition).md",
+    "Notes/Programming/Java/Multithreading/volatile.md",
+    "Notes/Programming/Concepts/Атомарность (Atomacy).md",
     "Notes/Programming/Java/Exceptions",
-    "Notes/Programming/Java/Memory",
-    "Notes/Programming/Java/Data Structures/Interfaces",
+    "Notes/Programming/OS",
+    "Notes/Programming/JPA",
+    "Notes/Programming/System Design/MVC",
+    "Notes/Programming/Spring/Annotations",
+    "Notes/Programming/Security",
+    "Notes/Programming/System Design",
+    "Notes/Programming/Spring",
+    "Notes/Programming/Java/Data Structures/Wrappers",
     "800.jpeg",
     "Media/Красно-чёрное дерево.png",
     "Без названия.canvas",

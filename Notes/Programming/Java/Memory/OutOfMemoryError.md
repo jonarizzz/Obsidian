@@ -1,4 +1,4 @@
-OutOfMemoryError в Java — это [[{TODO} Error||ошибка]], возникающая, когда [[{TODO} JVM||JVM]] не может выделить больше памяти для выполнения программы. Она наследуется от [[{TODO} VirtualMachineError||VirtualMachineError]] и сигнализирует о критической нехватке ресурсов.
+OutOfMemoryError в Java — это [[{TODO} Error||ошибка]], возникающая, когда [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]] не может выделить больше памяти для выполнения программы. Она наследуется от [[{TODO} VirtualMachineError||VirtualMachineError]] и сигнализирует о критической нехватке ресурсов.
 
 
 ### Основные причины возникновения OutOfMemoryError
@@ -16,12 +16,12 @@ OutOfMemoryError в Java — это [[{TODO} Error||ошибка]], возник
 	- Ошибка: `java.lang.OutOfMemoryError: Metaspace`
 	- Причины:
 		- Динамическая загрузка [[Класс (Class)||классов]] без их выгрузки (например, при использовании [[{TODO} ClassLoader||ClassLoader]]).
-		- Слишком много сгенерированных динамически [[Класс (Class)||классов]] (в фреймворках типа [[{TODO} Hibernate||Hibernate]], [[{TODO} Spring||Spring]]).
+		- Слишком много сгенерированных динамически [[Класс (Class)||классов]] (в фреймворках типа [[{TODO} Hibernate||Hibernate]], [[Спринг Фреймворк (Spring Framework)||Spring]]).
 
 - **GC overhead limit exceeded**
-	- [[{TODO} JVM||JVM]] тратит слишком много времени на [[Сборщик Мусора (Garbage Collector)||сборку мусора]], но освобождает мало памяти.
+	- [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]] тратит слишком много времени на [[Сборщик Мусора (Garbage Collector)||сборку мусора]], но освобождает мало памяти.
 	- Ошибка: `java.lang.OutOfMemoryError: GC overhead limit exceeded`
-	- Обычно связано с утечками памяти или недостаточным выделением памяти для [[{TODO} JVM||JVM]].
+	- Обычно связано с утечками памяти или недостаточным выделением памяти для [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]].
 
 - **Direct buffer memory**
 	- Недостаточно памяти для выделения `ByteBuffer` вне [[Heap (Область Памяти)||кучи]].
@@ -34,7 +34,7 @@ OutOfMemoryError в Java — это [[{TODO} Error||ошибка]], возник
 	- Ошибка: `java.lang.OutOfMemoryError: Unable to create new native thread`
 	- Причины:
 		- Достигнут лимит потоков ОС.
-		- Утечка [[Поток (Thread)||потоков]] (например, не завершаются [[{TODO} ExecutorService||ExecutorService]]).
+		- Утечка [[Поток (Thread)||потоков]] (например, не завершаются [[ExecutorService||ExecutorService]]).
 
 
 ### Способы решения

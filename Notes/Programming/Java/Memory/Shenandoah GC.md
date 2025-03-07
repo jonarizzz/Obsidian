@@ -9,7 +9,7 @@
 
 ### Как включить Shenandoah GC?
 
-Чтобы использовать Shenandoah GC, необходимо запустить [[{TODO} JVM||JVM]] с соответствующими флагами:
+Чтобы использовать Shenandoah GC, необходимо запустить [[Виртуальная Машина Java (Java Virtual Machine, JVM)||JVM]] с соответствующими флагами:
 
 ```
 java -XX:+UseShenandoahGC -jar your-application.jar

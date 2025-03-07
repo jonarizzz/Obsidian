@@ -11,10 +11,72 @@
             "id": "da73e5f1b152ad6c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "Currency.com.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Currency.com"
+            }
+          },
+          {
+            "id": "84c1082101719bdc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Programming/Spring/Автоконфигурация (Spring Boot Auto Configuration).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Автоконфигурация (Spring Boot Auto Configuration)"
+            }
+          },
+          {
+            "id": "442c89a1a588c62f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Programming/Java/Classpath.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Classpath"
             }
           }
         ]
@@ -32,10 +94,11 @@
         "state": {
           "type": "file-explorer",
           "state": {
-            "sortOrder": "alphabetical"
+            "sortOrder": "alphabetical",
+            "autoReveal": false
           },
           "icon": "lucide-folder-closed",
-          "title": "Files"
+          "title": "Файловый менеджер"
         }
       },
       {
@@ -91,6 +154,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Currency.com.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -144,6 +208,11 @@
   },
   "active": "da73e5f1b152ad6c",
   "lastOpenFiles": [
+    "Notes/Programming/Spring/Автоконфигурация (Spring Boot Auto Configuration).md",
+    "Notes/Programming/Java/Classpath.md",
+    "Currency.com.md",
+    "Notes/Programming/Spring/Annotations/{TODO} Conditional (аннотация).md",
+    "Notes/Programming/{TODO} Библиотека (Library).md",
     "Notes/Computer Science/Алгоритмы/Алгоритмы.md",
     "Notes/Computer Science/Computer Science.md",
     "Start.md",

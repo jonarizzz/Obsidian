@@ -130,7 +130,7 @@ public class Main {
 - [[Многопоточное Программирование (Многопоточка, Multithreading)||Асинхронное]] выполнение задач (например, [[CompletableFuture||CompletableFuture]] в [[{TODO} Java 8||Java 8]])
 - Обработка событий в GUI (например, ActionListener в Swing)
 - Реализация паттерна [[Паттерн Наблюдатель (Observer)||Observer]]
-- Обработка [[{TODO} Http||HTTP-запросов]] (например, в Retrofit для Android)
+- Обработка [[{TODO} HTTP||HTTP-запросов]] (например, в Retrofit для Android)
 
   
 ### Что выбрать?
