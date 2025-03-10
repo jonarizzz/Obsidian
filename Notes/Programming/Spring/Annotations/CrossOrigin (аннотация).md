@@ -23,7 +23,7 @@ public class MyController {
 
 ### Настройка параметров:
 
-Аннотация позволяет настроить различные параметры, такие как список разрешённых источников, [[{TODO} HTTP Методы||методы HTTP]] и [[{TODO} HTTP Заголовки (HTTP Headers)||заголовки]].
+Аннотация позволяет настроить различные параметры, такие как список разрешённых источников, [[{TODO} HTTP Методы (HTTP Methods)||методы HTTP]] и [[{TODO} HTTP Заголовки (HTTP Headers)||заголовки]].
 
 ```java
 @CrossOrigin(origins = "http://example.com", allowedHeaders = "Authorization", methods = {RequestMethod.GET, RequestMethod.POST})
@@ -38,7 +38,7 @@ public class MyController {
 
 - `origins` — список доменов, которым разрешено делать запросы.
 - `allowedHeaders` — список заголовков, которые могут быть использованы в запросах.
-- `methods` — список методов [[{TODO} HTTP Методы||HTTP]] (например, GET, POST), которые разрешены для использования с кросс-доменными запросами.
+- `methods` — список методов [[{TODO} HTTP Методы (HTTP Methods)||HTTP]] (например, GET, POST), которые разрешены для использования с кросс-доменными запросами.
 
   
 

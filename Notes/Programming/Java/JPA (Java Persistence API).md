@@ -20,7 +20,7 @@ public class User {
     private String name;
 }
 ```
-- Позволяет управлять жизненным циклом объектов, выполняя [[{TODO} CRUD-Операции||CRUD-операции]]:
+- Позволяет управлять жизненным циклом объектов, выполняя [[{TODO} CRUD (Create, Read, Update, Delete)||CRUD-операции]]:
 ```java
 EntityManager em = entityManagerFactory.createEntityManager();
 em.getTransaction().begin();
@@ -29,7 +29,7 @@ em.getTransaction().commit();
 em.close();
 ```
 - Поддерживает связи между сущностями ([[{TODO} OneToOne (аннотация)||@OneToOne]], [[{TODO} OneToMany (аннотация)||@OneToMany]], [[{TODO} ManyToOne (аннотация)||@ManyToOne]], [[{TODO} ManyToMany (аннотация)||@ManyToMany]]).
-- Позволяет использовать [[{TODO} JPQL||JPQL (Java Persistence Query Language)]] — аналог [[{TODO} SQL||SQL]], но работающий с [[Объект (Object)||объектами]], а не с [[Таблица БД (DB Table)||таблицами]].
+- Позволяет использовать [[{TODO} JPQL||JPQL (Java Persistence Query Language)]] — аналог [[{TODO} SQL||SQL]], но работающий с [[Объект (Object)||объектами]], а не с [[Таблица БД (Database Table, DB Table)||таблицами]].
 ```java
 List<User> users = em.createQuery("SELECT u FROM User u WHERE u.name = :name", User.class)
 	 .setParameter("name", "Yauheni")
@@ -40,6 +40,6 @@ List<User> users = em.createQuery("SELECT u FROM User u WHERE u.name = :name", U
 
 ### Когда использовать JPA?
 
-- Если нужно работать с [[База данных (Database)||базами данных]] в [[ООП – Объектно-Ориентированное Программирование (OOP, Object Oriented Programming)||объектно-ориентированном]] стиле.
-- Когда важна переносимость кода между разными [[База данных (Database)||базами данных]] ([[{TODO} SQL||SQL]]-синтаксис у БД может отличаться, а JPA абстрагирует это).
+- Если нужно работать с [[База данных (БД, Database, DB)||базами данных]] в [[ООП – Объектно-Ориентированное Программирование (OOP, Object Oriented Programming)||объектно-ориентированном]] стиле.
+- Когда важна переносимость кода между разными [[База данных (БД, Database, DB)||базами данных]] ([[{TODO} SQL||SQL]]-синтаксис у БД может отличаться, а JPA абстрагирует это).
 - В больших проектах, где нужно управлять сложными связями между [[Объект (Object)||объектами]].
