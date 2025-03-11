@@ -35,7 +35,7 @@
 - Банковские переводы, ERP-системы
 
 
-### Пример [[Двухфазный Коммит (Two-Phase Commit, 2PC)||2PC]] в [[{TODO} SQL||SQL]] (MySQL XA Transactions)
+### Пример [[Двухфазный Коммит (Two-Phase Commit, 2PC)||2PC]] в [[{TODO} SQL (Structured Query Language)||SQL]] (MySQL XA Transactions)
 
 ```mysql
 XA START 'trx1';

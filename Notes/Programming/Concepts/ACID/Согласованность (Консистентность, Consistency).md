@@ -9,7 +9,7 @@
 - Если транзакция нарушает согласованность, она [[Откат Транзакции (Rollback)||откатывается]] (`ROLLBACK`).
 
 
-### Пример в [[{TODO} SQL||SQL]]
+### Пример в [[{TODO} SQL (Structured Query Language)||SQL]]
 
 ```sql
 START TRANSACTION;

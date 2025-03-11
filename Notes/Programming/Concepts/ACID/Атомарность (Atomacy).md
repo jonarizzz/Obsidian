@@ -9,7 +9,7 @@
 - Если все операции успешно выполнены — [[Транзакция (Transaction)||транзакция]] [[{TODO} Подтверждение Транзакции (Фиксирование Транзакции, Commit Transaction)||подтверждается]] (`COMMIT`).
 
 
-### Пример в [[{TODO} SQL||SQL]]
+### Пример в [[{TODO} SQL (Structured Query Language)||SQL]]
 
 ```sql
 START TRANSACTION;
