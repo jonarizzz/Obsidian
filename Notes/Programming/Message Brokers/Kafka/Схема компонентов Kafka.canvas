@@ -6,7 +6,7 @@
 		{"id":"4e695efb0db6a3b1","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Реплика Раздела Кафка (Kafka Partition Replica).md","x":5320,"y":431,"width":379,"height":160},
 		{"id":"e64ed1910580e2a1","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Реплика Раздела Кафка (Kafka Partition Replica).md","x":4360,"y":431,"width":379,"height":160},
 		{"id":"fd97dad69c7fb32f","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Реплика Раздела Кафка (Kafka Partition Replica).md","x":5800,"y":431,"width":379,"height":160},
-		{"id":"dae237f1d6bb2170","x":5096,"y":-40,"width":347,"height":102,"type":"text","text":"Решает в какой Топик --> Раздел --> Реплику Раздела сохранить сообщение"},
+		{"id":"dae237f1d6bb2170","type":"text","text":"Решает в какой Топик --> Раздел --> Реплику Раздела сохранить сообщение","x":5096,"y":-40,"width":347,"height":102},
 		{"id":"e3631b3e9c738d41","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Раздел Топика Кафка (Kafka Topic Partition).md","x":4600,"y":880,"width":379,"height":160},
 		{"id":"40e8c00774b16124","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Раздел Топика Кафка (Kafka Topic Partition).md","x":5560,"y":880,"width":379,"height":160},
 		{"id":"47a9a850c0dab860","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Топик Кафка (Kafka Topic).md","x":5080,"y":1360,"width":379,"height":160},
@@ -17,7 +17,10 @@
 		{"id":"4686a2bdc0ae00d8","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Сообщение Кафка (Kafka Message).md","x":2600,"y":0,"width":379,"height":160},
 		{"id":"6a0cc49a2c306104","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Потребитель Кафка (Kafka Consumer).md","x":7120,"y":-320,"width":379,"height":160},
 		{"id":"b04e7937c39c294d","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Сообщение Кафка (Kafka Message).md","x":6120,"y":-320,"width":379,"height":160},
-		{"id":"a687073a4fb1b36a","x":6120,"y":-600,"width":379,"height":160,"type":"file","file":"Notes/Programming/Message Brokers/Kafka/Смещение Кафка (Kafka Offset).md"}
+		{"id":"a687073a4fb1b36a","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Смещение Кафка (Kafka Offset).md","x":6120,"y":-600,"width":379,"height":160},
+		{"id":"66efe540b38951d2","x":4480,"y":-760,"width":360,"height":160,"type":"file","file":"Notes/Programming/Message Brokers/Kafka/Kafka Zookeeper.md"},
+		{"id":"8c3479107d38d256","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Брокер Кафка (Kafka Broker).md","x":5320,"y":-840,"width":379,"height":160},
+		{"id":"380600714b43c273","type":"file","file":"Notes/Programming/Message Brokers/Kafka/Брокер Кафка (Kafka Broker).md","x":5320,"y":-1120,"width":379,"height":160}
 	],
 	"edges":[
 		{"id":"93cb210eb81583f5","fromNode":"6d25ed50e04b4642","fromSide":"right","toNode":"4686a2bdc0ae00d8","toSide":"left","label":"Посылает"},
@@ -42,6 +45,10 @@
 		{"id":"9cf9fc2fd35f2bbf","fromNode":"b04e7937c39c294d","fromSide":"right","toNode":"6a0cc49a2c306104","toSide":"left","label":"Приходит на"},
 		{"id":"ab15b9d26912de6e","fromNode":"6a0cc49a2c306104","fromSide":"bottom","toNode":"d758abd8667893ac","toSide":"bottom","label":"Запрашивает сообщения \n(с указанием топика)"},
 		{"id":"a322e38ced8b4c23","fromNode":"6a0cc49a2c306104","fromSide":"top","toNode":"a687073a4fb1b36a","toSide":"right","label":"Обновляет после обработки\nсообщения"},
-		{"id":"b43d11fd1ce230ec","fromNode":"a687073a4fb1b36a","fromSide":"left","toNode":"d758abd8667893ac","toSide":"top","label":"Посылает в"}
+		{"id":"b43d11fd1ce230ec","fromNode":"a687073a4fb1b36a","fromSide":"left","toNode":"d758abd8667893ac","toSide":"top","label":"Посылает в"},
+		{"id":"da5ecb914aba9b0b","fromNode":"10f793e6c60ab7cd","fromSide":"top","toNode":"66efe540b38951d2","toSide":"left","label":"Включает в себя"},
+		{"id":"a3ea28781bae36e0","fromNode":"66efe540b38951d2","fromSide":"right","toNode":"d758abd8667893ac","toSide":"top","label":"Координирует\n"},
+		{"id":"ff36f70011f11917","fromNode":"66efe540b38951d2","fromSide":"right","toNode":"8c3479107d38d256","toSide":"left","label":"Координирует"},
+		{"id":"04826525c07abcbd","fromNode":"66efe540b38951d2","fromSide":"right","toNode":"380600714b43c273","toSide":"left","label":"Координирует"}
 	]
 }

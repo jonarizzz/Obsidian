@@ -30,7 +30,7 @@
 	- Java Transaction API (JTA) + Java Transaction Service (JTS)
 	- Используется в WildFly, WebLogic, WebSphere
 - Брокеры сообщений
-	- [[{TODO} Kafka Transactions||Kafka Transactions]]
+	- [[Транзакция Кафка (Kafka Transaction)||Kafka Transactions]]
 	- JMS (Java Message Service)
 - Банковские переводы, ERP-системы
 

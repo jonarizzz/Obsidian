@@ -4,33 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "183a5f14c2a0e15c",
+        "id": "a411cad8fc209d88",
         "type": "tabs",
         "children": [
           {
-            "id": "e35adf1c3adf2f70",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Notes/Programming/Message Brokers/Kafka/Схема компонентов Kafka.canvas",
-                "viewState": {
-                  "x": 4820.390407242562,
-                  "y": 306.9729856752735,
-                  "zoom": -2.598930393396878
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Схема компонентов Kafka"
-            }
-          },
-          {
-            "id": "51c2b936133a85cd",
+            "id": "e6cd443624cb1336",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Programming/Message Brokers/Kafka/Потребитель Кафка (Kafka Consumer).md",
+                "file": "Interview Questions.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -45,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Потребитель Кафка (Kafka Consumer)"
-            }
-          },
-          {
-            "id": "bcbc18e6cc3d4aa1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Programming/Message Brokers/Kafka/Брокер Кафка (Kafka Broker).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Брокер Кафка (Kafka Broker)"
+              "title": "Interview Questions"
             }
           }
         ]
@@ -218,19 +177,21 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "e35adf1c3adf2f70",
+  "active": "e6cd443624cb1336",
   "lastOpenFiles": [
-    "Notes/Programming/Message Brokers/Kafka/Потребитель Кафка (Kafka Consumer).md",
-    "Notes/Programming/Message Brokers/Kafka/Схема компонентов Kafka.canvas",
-    "Notes/Programming/Message Brokers/Kafka/Производитель Кафка (Kafka Producer).md",
     "Notes/Programming/Message Brokers/Kafka/Брокер Кафка (Kafka Broker).md",
+    "Notes/Programming/Message Brokers/Kafka/Потребитель Кафка (Kafka Consumer).md",
+    "Notes/Programming/Message Brokers/Kafka/Транзакция Кафка (Kafka Transaction).md",
+    "Notes/Programming/Message Brokers/Kafka/Типы доставки в Кафка (Kafka Delivery Types).md",
+    "Notes/Programming/Message Brokers/Kafka/Схема компонентов Kafka.canvas",
+    "Notes/Programming/Message Brokers/Kafka/Kafka Zookeeper.md",
     "Notes/Programming/Message Brokers/Kafka/Реплика Раздела Кафка (Kafka Partition Replica).md",
+    "Notes/Programming/Message Brokers/Kafka/Производитель Кафка (Kafka Producer).md",
     "Notes/Programming/Message Brokers/Kafka/Раздел Топика Кафка (Kafka Topic Partition).md",
     "Notes/Programming/Message Brokers/Kafka/Топик Кафка (Kafka Topic).md",
     "Notes/Programming/Message Brokers/Kafka/Сообщение Кафка (Kafka Message).md",
     "Notes/Programming/Message Brokers/Kafka/Кафка (Apache Kafka).md",
     "Interview Questions.md",
-    "Типы доставки в Кафка (Kafka Delivery Types).md",
     "Notes/Programming/Message Brokers/Kafka/Смещение Кафка (Kafka Offset).md",
     "Notes/Programming/Apache Flink.md",
     "Notes/Programming/Message Brokers/{TODO} ActiveMQ.md",
@@ -245,7 +206,6 @@
     "Notes/Programming/System Design/API Gateway.md",
     "Notes/Programming/Web/Фаервол (Firewall).md",
     "Notes/Programming/Java/Memory/Сборщик Мусора (Garbage Collector).md",
-    "Notes/Programming/System Design/Микросервис (Microservice).md",
     "Notes/Programming/Files/Formats",
     "Notes/Programming/Files",
     "Notes/Programming/Web/IP",

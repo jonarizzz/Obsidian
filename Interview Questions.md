@@ -969,8 +969,6 @@ public class Controller {
 ---
 ## Design questions
 
-- Let’s assume we have a task to call some external API, for example to perform identity verification of a client. We need to build an integration with 3rd party from scratch. Each API call costs us money. What are the most important things you would do to make sure it works correctly? What should be considered first?
-- How would you design the account deposit/withdrawal feature high level in micreservice architecture where you have payment and core service running independently with their own databases. What locking mechanisms to use and how to coordinate interservice communication?
 - Предположим, у нас есть задача вызвать некий внешний API, например, для проверки личности клиента. Нам нужно построить интеграцию со сторонними организациями с нуля. Каждый вызов API стоит нам денег. Какие самые важные вещи вы бы сделали, чтобы убедиться, что все работает правильно? Что следует рассмотреть в первую очередь?
 - Как бы вы спроектировали функцию депозита/снятия средств на счете высокого уровня в архитектуре микросервиса, где у вас есть платежная и основная службы, работающие независимо друг от друга с собственными базами данных. Какие механизмы блокировки использовать и как координировать межсервисную связь?
 
