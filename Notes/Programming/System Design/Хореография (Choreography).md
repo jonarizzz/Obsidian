@@ -4,7 +4,7 @@
 ### Где используется?
 
 - В [[Сага (SAGA)||SAGA]] (Event-Driven Choreography) для управления [[Транзакция (Transaction)||транзакциями]].
-- В [[Микросервис (Microservice)||микросервисах]] (через [[{TODO} Kafka||Kafka]], [[{TODO} RabbitMQ||RabbitMQ]], [[{TODO} EventBridge||EventBridge]]).
+- В [[Микросервис (Microservice)||микросервисах]] (через [[Кафка (Apache Kafka)||Kafka]], [[{TODO} RabbitMQ||RabbitMQ]], [[{TODO} EventBridge||EventBridge]]).
 
 
 ### Пример

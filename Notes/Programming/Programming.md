@@ -1,7 +1,7 @@
 
 #### [[Computer Science]]
 #### [[Code Structure]]
-#### [[Java]]
+#### [[{TODO} Java]]
 #### [[{TODO} Hibernate]]
 #### [[Спринг Фреймворк (Spring Framework)]]
 #### [[Databases]]

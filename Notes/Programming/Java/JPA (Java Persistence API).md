@@ -20,7 +20,7 @@ public class User {
     private String name;
 }
 ```
-- Позволяет управлять жизненным циклом объектов, выполняя [[{TODO} CRUD (Create, Read, Update, Delete)||CRUD-операции]]:
+- Позволяет управлять жизненным циклом объектов, выполняя [[CRUD (Create, Read, Update, Delete)||CRUD-операции]]:
 ```java
 EntityManager em = entityManagerFactory.createEntityManager();
 em.getTransaction().begin();

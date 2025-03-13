@@ -1,4 +1,4 @@
-**REST** — это архитектурный стиль для построения веб-сервисов, основанный на [[HTTP (Hypertext Transfer Protocol)||HTTP]] и использовании [[{TODO} CRUD (Create, Read, Update, Delete)||CRUD-операций]] через стандартные методы ([[GET||GET]], [[POST||POST]], [[PUT||PUT]], [[DELETE||DELETE]]).
+**REST** — это архитектурный стиль для построения веб-сервисов, основанный на [[HTTP (Hypertext Transfer Protocol)||HTTP]] и использовании [[CRUD (Create, Read, Update, Delete)||CRUD-операций]] через стандартные методы ([[GET||GET]], [[POST||POST]], [[PUT||PUT]], [[DELETE||DELETE]]).
 
 
 ### Принципы
@@ -30,6 +30,6 @@ GET https://api.example.com/users/1
 
 ### Где используется
 
-- [[{TODO} Веб Приложение (Web Application)||Веб-приложения]] и API.
+- [[Веб Приложение (Web Application)||Веб-приложения]] и API.
 - [[Микросервис (Microservice)||Микросервисные]] архитектуры.
 - Мобильные приложения.
